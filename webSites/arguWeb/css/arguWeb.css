@@ -1,0 +1,103 @@
+  /*creation du variable contenant une couleur*/
+  :root{
+    --main-color: #24c1bd;
+  }
+
+  /*mise en place du fond decran avec une image et en fixe*/
+  body {
+    /*background-color: var(--main-color, white);*/
+    background: url("../assets/fond_decran.jpg");
+    background-attachment: fixed;
+    /*desactivtion de la scrollbar*/
+    overflow: hidden;
+  }
+
+  /*initialiation de la taille et le style du texte par default*/
+  p{
+    /*style du texte*/
+    font-family: Arial, Helvetica, sans-serif;
+    /*taille du texte*/
+    font-size: 18px;
+  }
+
+  /*creation de la div pour le formulaire*/
+  .formulaire {
+    /*permet de centrer la div horizontalement*/
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    /*longueur et largeur de la div*/
+    height: 450px;
+    width: 450px;
+    /*fond blanc*/
+    background-color: white;
+    /*marge interne de 10px*/
+    padding: 10px;
+    /* contour en ombre*/
+    box-shadow: 3px 3px 3px 3px var(--main-color, #24c1bd);
+  }
+
+  /*réduction de la taille de l'image*/
+  .imgIFSI{
+    width: 27%;
+  }
+
+  /*l'image est placer selon la div, au tout debut, sois en haut à gauche*/
+  div#IFSI{
+    position: absolute;
+  }
+
+  /*réduction de la taille de l'image*/
+  .imgSTJO{
+    width: 90%;
+  }
+
+  /*positionnement de l'image en bas à droite de la div*/
+  div#STJO{
+    position: absolute;
+    top: 85%;
+    left: 70%;
+  }
+
+  /*marge interne du text "CULM"*/
+  .titre{
+    padding-top: 30px;
+    padding-left: 0px;
+  }
+
+  /*marge externe nul*/
+  .m-0{
+    margin: 0px;
+  }
+
+  /*definition de la taille des input prenom, nom, justification*/
+  input#nom #prenom textarea#jutification{
+    height: 30px;
+    width: 220px;
+  }
+
+  /*bouton pour valider le formulaire*/
+  input#valider{
+    /*couleur de fond*/
+    background-color : #24c1bc65;
+    /*taille du boutton*/
+    height: 40px;
+    width: 150px;
+    border-style: solid;
+    /*border-color: rgb(163, 161, 161);*/
+    border-width: 1px;
+    /*couleur du texte*/
+    color: white;
+  }
+
+  /*si la taille de la fenetre dessant sous 470px*/
+  @media (max-width: 470px) {
+    body{
+      /*la couleur du fond decran devient blanc*/
+      background: white;
+    }
+
+    .formulaire {
+      /*le contour en ombre disparait*/
+      box-shadow: none;
+    }
+  }
